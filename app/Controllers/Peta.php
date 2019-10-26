@@ -7,6 +7,11 @@ use CodeIgniter\Controller;
 //use App\Libraries\DOMDocument;
 //use App\Libraries\FluidXml\FluidXml;
 //require_once ROOTPATH . 'vendor/autoload.php';
+use \FluidXml\FluidXml;
+use \FluidXml\FluidNamespace;
+use function \FluidXml\fluidxml;
+use function \FluidXml\fluidns;
+use function \FluidXml\fluidify;
 class Peta extends BaseController
 {	
 	protected $domdoc;
@@ -99,12 +104,13 @@ class Peta extends BaseController
 		$dom->save($xml_file_name);
 
 		echo "$xml_file_name has been successfully created";*/
-
-		$book = new FluidXml('book');
-		$book->setAttribute('type', 'science')                  // It sets an attribute of the root node ('book').
-		->addChild([ 'title'  => 'The Theory Of Everything',
-                     'author' => 'S. Hawking' ]);       // It creates two nodes, each one with some text inside.
-		echo $book->xml();                                      // Exports the xml document as a string.
-		echo "————————————————————————————————————————————————————————————————————————————————\n";
+		
+		$book = fluidxml();
+		$book->add('title',  'The Theory Of Everything')
+     	->add('author', 'S. Hawking')
+     	->add('description')
+		->save('../xml/book2.xml', true);
+		echo $book;
+		 //echo getcwd();
 	}
 }

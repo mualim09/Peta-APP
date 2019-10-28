@@ -1,0 +1,4 @@
+<markers>
+  <marker id="00001" name="lokasi1" address="jl. kebun raya 1" lat="-6.29687" lng="106.689" type="hotel" description="deskripsi 1" image="hotel.jpg"/>
+  <marker id="00002" name="lokasi2" address="jl. kebun raya 2" lat="-6.29444" lng="106.707" type="restoran" description="deskripsi 2" image="restoran.jpg"/>
+</markers>

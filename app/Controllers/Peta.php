@@ -29,7 +29,7 @@ class Peta extends BaseController
 		$markers = fluidxml('markers');
 
 		foreach ($listing as $dataListing) {
-			$markers->add([ ['marker'] ], ['id' => $dataListing['id'], 'name' => $dataListing['name'], 'address' => $dataListing['address'], 'lat' => $dataListing['lat'], 'lng' => $dataListing['long'], 'type' => $dataListing['type'], 'description' => $dataListing['description'], 'image' => $dataListing['image'] ]);
+			$markers->add([ ['marker'] ], ['id' => $dataListing['id'], 'name' => $dataListing['name'], 'address' => $dataListing['address'], 'lat' => $dataListing['lat'], 'lng' => $dataListing['lng'], 'type' => $dataListing['type'], 'description' => $dataListing['description'], 'image' => $dataListing['image'] ]);
 		}
 		
 		$markers->save('xml/markers.xml', true);

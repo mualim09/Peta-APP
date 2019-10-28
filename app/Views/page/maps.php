@@ -12,10 +12,9 @@
       </div>
     </div>
   </div>
-  <div id="map"></div>
+  <div id="map"> </div>
   <div class="row">
     <div class="col-md-12">  
-      
     </div>
   </div>
   <script>

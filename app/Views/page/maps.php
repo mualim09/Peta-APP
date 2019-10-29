@@ -12,9 +12,10 @@
       </div>
     </div>
   </div>
-  <div id="map"> </div>
-  <div class="row">
-    <div class="col-md-12">  
+  
+  <div class="row map-row">
+    <div class="col-md-12 map-col">
+      <div id="map"></div>
     </div>
   </div>
   <script>
@@ -94,7 +95,7 @@
 
         //prepare for icon file
         var iconBase =
-        'http://peta.local/assets/icon/';
+        '../assets/icon/';
         var icons = {
           restoran: {
             icon: iconBase + 'resto.png'

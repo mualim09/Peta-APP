@@ -10,7 +10,7 @@
        .header .searchBox {
         background: blue;
        }
-      #map {
+      .map-row, .map-col, #map {
         height: 100%;
       }
       /* Optional: Makes the sample page fill the window. */

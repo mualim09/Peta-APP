@@ -2,11 +2,11 @@
   <div class="row">
     <div class="col-md-12">
       <div class="header">
-        <div class="searchBox">
+        <div class="col-md-8">
           <span class="cari">Cari</span>
           <input id="pac-input" class="controls" type="text" placeholder="Search Box">
         </div>
-        <div class="language">
+        <div class="col-md-4">
           Icon Bendera
         </div>
       </div>
@@ -37,7 +37,7 @@
 
       var input = document.getElementById('pac-input');
       var searchBox = new google.maps.places.SearchBox(input);
-      map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+      //map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
 
         // Bias the SearchBox results towards current map's viewport.
         map.addListener('bounds_changed', function() {

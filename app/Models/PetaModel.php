@@ -9,13 +9,12 @@ class PetaModel extends Model
 
     public function getListing($name = false)
     {
-     if ($name === false)
-     {
-        return $this->findAll();
+        if ($name === false) {
+            return $this->findAll();
+        }
+        return $this->asArray()
+        ->where(['name' => $name])
+        ->first();
     }
-    return $this->asArray()
-    ->where(['name' => $name])
-    ->first();
-}
 
 }

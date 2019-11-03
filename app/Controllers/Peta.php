@@ -19,7 +19,13 @@ class Peta extends BaseController
 
 		echo view('template/header', $data);
 		echo view('page/maps', $data);
+		echo view('template/footer');
 
+	}
+
+	public function mapsDetail()
+	{
+		//$data = array('konten' => , );
 	}
 
 	public function generateXML()

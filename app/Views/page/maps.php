@@ -145,6 +145,16 @@
             var deskripsi = document.createElement('deskripsi');
             deskripsi.textContent = description
             infowincontent.appendChild(deskripsi);
+
+            var link = document.createElement('a');
+            var detail = document.createElement('text');
+            detail.textContent = 'Detail';
+            link.setAttribute('class', 'detail');
+            link.setAttribute('data-id', id);
+            link.setAttribute('href', '#');
+            link.appendChild(detail);
+            infowincontent.appendChild(link);
+
             var icon = customLabel[type] || {};
             var marker = new google.maps.Marker({
               map: map,

@@ -73,7 +73,9 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
-
+$routes->get('cari/(:segment)', 'Peta::mapsDetail');
+$routes->post('cari', 'Peta::mapsDetail');
+//$routes->get('Peta/cari/(:segment)', 'Peta::mapsDetail/$1');
 /**
  * --------------------------------------------------------------------
  * Additional Routing

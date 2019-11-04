@@ -24,8 +24,22 @@ class Peta extends BaseController
 	}
 
 	public function mapsDetail()
-	{
-		//$data = array('konten' => , );
+	{	
+
+		$request = \Config\Services::request();
+		if ($request->isAJAX())
+		{
+		    $id = $request->getVar('id');
+			$model = new PetaModel;
+			$detail = $model->mapsDetail($id);
+			$data = array('konten' => $detail);
+			
+			return ($data['konten']['description']);
+		}
+		
+		
+		//$detail = $model->find($id);
+		//var_dump($detail);
 	}
 
 	public function generateXML()

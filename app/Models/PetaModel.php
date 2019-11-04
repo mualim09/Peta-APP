@@ -17,4 +17,13 @@ class PetaModel extends Model
         ->first();
     }
 
+     public function mapsDetail($id)
+    {
+        if ($id == true) {
+            return $this->asArray()
+            ->where(['id' => $id])
+            ->first();
+        }
+    }
+
 }
